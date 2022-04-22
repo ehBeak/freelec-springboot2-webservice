@@ -1,15 +1,20 @@
 plugins {
+    id 'org.springframework.boot' version '2.4.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' // 스프링 부트의 의존성 관리
     id 'java'
 }
 
 group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
 
-repositories {
+repositories { // 각종 의존성 (라이브러리)들을 어떤 원격 저장소에서 받을지 정함
     mavenCentral()
 }
 
-dependencies {
+dependencies { // 개발에 필요한 의존성 선언
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
@@ -17,3 +22,5 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+//TODO: build.gradle 설정 정리(buildscript, ext, implementation, compile, apply plugin)
