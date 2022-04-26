@@ -2,3 +2,6 @@
 
 .gradle
 .idea
+
+# oauth 관련 설정 파일
+application-oauth.properties
