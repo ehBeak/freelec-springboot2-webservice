@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * 사용자 정보를 담당할 도메인
+ */
 @Entity
 @NoArgsConstructor
 @Getter
